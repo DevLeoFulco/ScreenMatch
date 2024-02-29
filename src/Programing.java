@@ -1,27 +1,19 @@
 public class Programing {
     public static void main(String[] args) {
-        Filme novoFilme = new Filme();
+        // Criando um novo filme utilizando o construtor
+        Filme novoFilme = new Filme("Harry Potter", "Filme de fantasia", 2001, true, "Fantasia", 10, 120);
 
-        novoFilme.titulo = "Harry Potter";
-        novoFilme.anoLancamento = 2001;
-        novoFilme.genero = "Fantasia";
-        novoFilme.duracaoEmMinutos = 120;
-        novoFilme.classificacaoIndicativa = 10;
-        novoFilme.avaliacaoIbm = 0;
-        novoFilme.descricao = "Filme de fantasia";
-        novoFilme.incluidoNoPlano = true;
+        // Adicionando avaliações
+        novoFilme.adicionarAvaliacao(6);
+        novoFilme.adicionarAvaliacao(7);
+        novoFilme.adicionarAvaliacao(8);
+        novoFilme.adicionarAvaliacao(9);
+        novoFilme.adicionarAvaliacao(3);
+        novoFilme.adicionarAvaliacao(5);
+        novoFilme.adicionarAvaliacao(4);
 
-
-        novoFilme.avaliar(6);
-        novoFilme.avaliar(7.5);
-        novoFilme.avaliar(8.7);
-        novoFilme.avaliar(9);
-        novoFilme.avaliar(3);
-        novoFilme.avaliar(5);
-        novoFilme.avaliar(4);
-
-        System.out.println(novoFilme.totalAvaliacao);
-        System.out.println(novoFilme.avaliacaoGeral);
-        System.out.println(novoFilme.avaliacaoIbm);
+        // Exibindo informações do filme e a avaliação IBM
+        novoFilme.exibirInformacoes();
+        System.out.println("Avaliação IBM: " + novoFilme.getAvaliacaoIbm());
     }
 }
