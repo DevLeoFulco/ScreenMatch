@@ -7,14 +7,21 @@ public class Programing {
         novoFilme.genero = "Fantasia";
         novoFilme.duracaoEmMinutos = 120;
         novoFilme.classificacaoIndicativa = 10;
-        novoFilme.avaliacaoIbm = 9.5;
+        novoFilme.avaliacaoIbm = 0;
         novoFilme.descricao = "Filme de fantasia";
         novoFilme.incluidoNoPlano = true;
 
-        System.out.println(novoFilme.titulo);
-        System.out.println(novoFilme.anoLancamento);
-        System.out.println(novoFilme.genero);
-        System.out.println(novoFilme.duracaoEmMinutos + " min");
-        System.out.println(novoFilme.classificacaoIndicativa);
+
+        novoFilme.avaliar(6);
+        novoFilme.avaliar(7.5);
+        novoFilme.avaliar(8.7);
+        novoFilme.avaliar(9);
+        novoFilme.avaliar(3);
+        novoFilme.avaliar(5);
+        novoFilme.avaliar(4);
+
+        System.out.println(novoFilme.totalAvaliacao);
+        System.out.println(novoFilme.avaliacaoGeral);
+        System.out.println(novoFilme.avaliacaoIbm);
     }
 }
