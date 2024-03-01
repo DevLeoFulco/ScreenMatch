@@ -20,10 +20,6 @@ public class Titulo {
         this.genero = genero;
         this.classificacaoIndicativa = classificacaoIndicativa;
         this.avaliacaoIbm = avaliacaoIbm;
-
-    }
-
-    public Titulo() {
     }
 
     public String getTitulo() {
@@ -116,7 +112,6 @@ public class Titulo {
         System.out.println("Classificação indicativa: " + classificacaoIndicativa);
         System.out.println("Avaliação IBM: " + avaliacaoIbm);
         System.out.println("Duração: " + duracaoEmMinutos + " min");
-        System.out.println("");
     }
 
     // Método para adicionar avaliação

@@ -7,7 +7,7 @@ public class Programing {
     public static void main(String[] args) {
         // Criando um novo filme utilizando o construtor
         int anoAtual = LocalDate.now().getYear(); // Obtendo o ano atual do sistema
-        Filme novoFilme = new Filme("Harry Potter", "Filme de fantasia", 2020, true, "Fantasia", 10, 120, 8, 10, "J.K. Rowling");
+        Filme novoFilme = new Filme("Harry Potter", "Filme de fantasia", 2020, true, "Fantasia", 10, 120, 8,  "J.K. Rowling");
 
         if (novoFilme.getAnoLancamento() < 1900 || novoFilme.getAnoLancamento() > anoAtual) {
             System.out.println("Erro: O ano de lançamento do filme não está dentro do intervalo permitido.");

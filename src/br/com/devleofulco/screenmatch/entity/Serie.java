@@ -16,13 +16,6 @@ public class Serie extends Titulo {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
-    public Serie(int temporadas, int episodiosPorTemporada, boolean ativa, int minutosPorEpisodio) {
-        this.temporadas = temporadas;
-        this.episodiosPorTemporada = episodiosPorTemporada;
-        this.ativa = ativa;
-        this.minutosPorEpisodio = minutosPorEpisodio;
-    }
-
     public int getTemporadas() {
         return temporadas;
     }
@@ -55,5 +48,13 @@ public class Serie extends Titulo {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
-    // Getters e setters omitidos para brevidade
+    // Método para exibir informações
+    @Override
+    public void exibirInformacoes() {
+        super.exibirInformacoes(); // Chama o método exibirInformacoes da superclasse Titulo
+        System.out.println("Temporadas: " + temporadas);
+        System.out.println("Episódios por temporada: " + episodiosPorTemporada);
+        System.out.println("Ativa: " + (ativa ? "Sim" : "Não"));
+        System.out.println("Minutos por episódio: " + minutosPorEpisodio);
+    }
 }
