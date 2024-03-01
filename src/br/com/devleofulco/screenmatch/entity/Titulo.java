@@ -1,4 +1,6 @@
-public class Filme {
+package br.com.devleofulco.screenmatch.entity;
+
+public class Titulo {
     private String titulo;
     private String descricao;
     private int anoLancamento;
@@ -10,49 +12,98 @@ public class Filme {
     private int numeroAvaliacoes;
     private int duracaoEmMinutos;
 
-    // Construtor
-    public Filme(String titulo, String descricao, int anoLancamento, boolean incluidoNoPlano,
-                 String genero, int classificacaoIndicativa, int duracaoEmMinutos) {
+    public Titulo(String titulo, String descricao, int anoLancamento, boolean incluidoNoPlano, String genero, int classificacaoIndicativa, double avaliacaoIbm) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.anoLancamento = anoLancamento;
         this.incluidoNoPlano = incluidoNoPlano;
         this.genero = genero;
         this.classificacaoIndicativa = classificacaoIndicativa;
-        this.duracaoEmMinutos = duracaoEmMinutos;
+        this.avaliacaoIbm = avaliacaoIbm;
+
     }
 
-    // Getters e Setters
+    public Titulo() {
+    }
+
     public String getTitulo() {
         return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getDescricao() {
         return descricao;
     }
 
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public int getAnoLancamento() {
         return anoLancamento;
+    }
+
+    public void setAnoLancamento(int anoLancamento) {
+        this.anoLancamento = anoLancamento;
     }
 
     public boolean isIncluidoNoPlano() {
         return incluidoNoPlano;
     }
 
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
     public String getGenero() {
         return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public int getClassificacaoIndicativa() {
         return classificacaoIndicativa;
     }
 
+    public void setClassificacaoIndicativa(int classificacaoIndicativa) {
+        this.classificacaoIndicativa = classificacaoIndicativa;
+    }
+
     public double getAvaliacaoIbm() {
         return avaliacaoIbm;
     }
 
+    public void setAvaliacaoIbm(double avaliacaoIbm) {
+        this.avaliacaoIbm = avaliacaoIbm;
+    }
+
+    public int getTotalAvaliacao() {
+        return totalAvaliacao;
+    }
+
+    public void setTotalAvaliacao(int totalAvaliacao) {
+        this.totalAvaliacao = totalAvaliacao;
+    }
+
+    public int getNumeroAvaliacoes() {
+        return numeroAvaliacoes;
+    }
+
+    public void setNumeroAvaliacoes(int numeroAvaliacoes) {
+        this.numeroAvaliacoes = numeroAvaliacoes;
+    }
+
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     // Método para exibir informações
@@ -65,6 +116,7 @@ public class Filme {
         System.out.println("Classificação indicativa: " + classificacaoIndicativa);
         System.out.println("Avaliação IBM: " + avaliacaoIbm);
         System.out.println("Duração: " + duracaoEmMinutos + " min");
+        System.out.println("");
     }
 
     // Método para adicionar avaliação
